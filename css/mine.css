@@ -504,10 +504,11 @@ h2 + .row {
     }
 
     .img-polaroid {
-        height: 80px;
-        width: 80px;
+        height: 1px;
+        width: 1px;
         margin-left: 50%;
-        margin-top: -30%;
+        margin-top: -60%;
+        visibility: hidden;
     }
 }
 
@@ -518,6 +519,11 @@ h2 + .row {
     body {
         padding-top: 0;
     }
+
+    .img-polaroid {
+        visibility: hidden;
+    }
+
 
     /* Change up some type stuff */
     h2 small {
