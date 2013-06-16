@@ -517,6 +517,12 @@ h2 + .row {
         margin-top: -60%;
         visibility: hidden;
     }
+
+    .hero-unit {
+        padding: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 /* Landscape phones
@@ -531,6 +537,11 @@ h2 + .row {
         visibility: hidden;
     }
 
+    .hero-unit {
+        padding: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
     /* Change up some type stuff */
     h2 small {
