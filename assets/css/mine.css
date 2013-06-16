@@ -42,6 +42,12 @@ h3 code {
 .contacts{
     margin-top: 40px;
     text-align: center; 
+    font-size: 12px;
+    height: 50px;
+    background-color: white;
+    min-height: 1px;
+    clear:both; width:100%;
+    border-top:1px solid #d1d1d1;
 }
 
 img {
