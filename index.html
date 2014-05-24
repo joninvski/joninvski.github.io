@@ -20,8 +20,16 @@
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
 <!-- Footer icon -->
-<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet"></link>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet"></link>
 
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script type="text/javascript">
+$(window).ready(function(e){
+        $.each($('div.progress-bar'),function(){
+            $(this).css('width', $(this).attr('aria-valuetransitiongoal')+'%');
+            });
+        });
+</script>
 </head>
 
 <body role="document">
@@ -72,11 +80,11 @@
                 <p>When I'm not coding you'll find me taking pictures or listening to audiobooks.</p>
                 <p>If you are interested please check my <a href="http://tagus.inesc-id.pt/~jtrindade/TrindadeJoaoCV.pdf">Curriculum Vitae</a>.</p>
             </div>
-        </div>
 
-        <!-- <div class="col-md-4"> -->
-        <!--     <img src="https://secure.gravatar.com/avatar/5c6ede6d03fff993d9718bfa89e01fdc?s=420" class="img-thumbnail" height="200px" alt="Profile"/> -->
-        <!-- </div> -->
+            <!-- <div class="col-md-4"> -->
+            <!--     <img src="https://secure.gravatar.com/avatar/5c6ede6d03fff993d9718bfa89e01fdc?s=420" class="img-thumbnail" height="200px" alt="Profile"/> -->
+            <!-- </div> -->
+        </div>
     </div>
 </div>
 
@@ -84,10 +92,10 @@
 <div id="footer">
     <div class="container">
         <div class="contacts">
-            <a href="http://github.com/joninvski"><i class="icon-github-sign icon-4x"></i></a>
-            <a href="http://google.com/+JoaoTrindade"><i class="icon-google-plus-sign icon-4x"></i></a>
-            <a href="http://pt.linkedin.com/in/trindadejoao"><i class="icon-linkedin-sign icon-4x"></i></a>
-            <a href="http://www.flickr.com/photos/joao_trindade"><i class="icon-flickr icon-4x"></i></a>
+            <a href="http://github.com/joninvski"><i class="fa fa-github-square fa-4x"></i></a>
+            <a href="http://google.com/+JoaoTrindade"><i class="fa fa-google-plus-square fa-4x"></i></a>
+            <a href="http://pt.linkedin.com/in/trindadejoao"><i class="fa fa-linkedin-square fa-4x"></i></a>
+            <a href="http://www.flickr.com/photos/joao_trindade"><i class="fa fa-flickr fa-4x"></i></a>
         </div>
     </div>
 </div>
@@ -98,7 +106,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.9.1.min.js"><\/script>')</script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
