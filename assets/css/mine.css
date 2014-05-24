@@ -1,19 +1,9 @@
 /* My changes
 -------------------------------------------------- */
 
-body {
-    padding-top: 100px;
-}
 
-.container .jumbotron {
-    background-color: rgb(255, 255, 255);
-}
-
-.contacts a {
-    color: rgb(65, 65, 65);
-}
-
-// Next lines are for the footer
+/* Sticky footer styles
+ * -------------------------------------------------- */
 html {
     position: relative;
     min-height: 100%;
@@ -32,4 +22,33 @@ body {
     border-top:1px solid #d1d1d1;
     background-color: white;
 }
-// END FOOTER
+
+
+/* Custom page CSS
+ * -------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 60px 15px 60px;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+#footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.container .jumbotron {
+    background-color: rgb(255, 255, 255);
+}
+
+.contacts a {
+    color: rgb(65, 65, 65);
+}
+
