@@ -1,0 +1,48 @@
+# Site settings
+title: Joao Trindade Website
+email: trindade.joao@gmail.com
+url: https://joaoptrindade.com
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+author: Joao Trindade
+
+# Contact form: comment the line below if you want to stick with the default PHP contact form
+contact: static
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 28774F #80B3FF
+  secondary: 28536C #FD6E8A
+  secondary-dark: 032336 #A2122F
+
+# Footer settings
+footer:
+  copyright: Dr. Henry Jekyll
+  location: Location
+  social: Around the Web
+  credits: Credits
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github
+    url: http://github.com/joninvski
+  - title: google-plus
+    url: http://google.com/+JoaoTrindade
+  - title: twitter
+    url: http://twitter.com/joaotrindade
+  - title: linkedin
+    url: http://pt.linkedin.com/in/trindadejoao
+  - title: flickr
+    url: http://www.flickr.com/photos/joao_trindade
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 3481 Melrose Place
+  - line: Beverly Hills, CA 90210
+
+# Credits content
+credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+
+# Build settings
+markdown: kramdown
+permalink: "/:title"
