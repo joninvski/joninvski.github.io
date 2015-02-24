@@ -1,12 +1,11 @@
 ---
 layout: default
 modal-id: 2
-date: 2014-07-17
+date: 2014-07-1
 img: github.png
 type: portfolio
 alt: image-alt
 experience: Started using in in 2009
-description: I've been using git since 2007 and am so dependent on it that I have the motto: "if it is not tracked by git, it does not exist".
-Github is the perfect companion to git.
+description: I have been using git since 2007 and am so dependent on it that I have the motto, "if it is not tracked by git, it does not exist". Github is the perfect companion to git.
 
 ---
