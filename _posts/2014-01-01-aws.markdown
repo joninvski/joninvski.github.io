@@ -7,6 +7,6 @@ alt: image-alt
 project-date: April 2014
 type: portfolio
 experience: Started using in early 2015
-description: Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
+description: Still a newbie but learning how to work with Amazon Web Services. I was given a 1000$ voucheur to learn and will spend 2015 working with this service.
 
 ---
