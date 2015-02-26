@@ -6,6 +6,6 @@ img: docker.png
 type: portfolio
 alt: image-alt
 experience: Started using in late 2014
-description: Docker has two main advantages. It helps developers and devops in the two last stages of the develop/test/deploy cycle and allows the modulorization of apps into several microservices.
+description: I've been using Docker and fig (now called docker-compose) to help deploy complex services on the cloud. Docker also allows to ease the develop/test/deploy cycle.
 
 ---

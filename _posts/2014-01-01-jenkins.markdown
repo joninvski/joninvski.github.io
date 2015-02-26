@@ -6,6 +6,6 @@ img: jenkins.png
 type: portfolio
 alt: image-alt
 experience: Started using in 2014 (same with Travis-CI)
-description: Strongly believe that the sucess of an app is directly correlated with the number of developed/test/deploy cycles. Jenkins plays a crutial role in the second stage of this cycle.
+description: Using travis-CI for open source projects and Jenkins for closed source projects to test android applications.
 
 ---
