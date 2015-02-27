@@ -6,6 +6,6 @@ img: android.png
 type: portfolio
 alt: image-alt
 experience: Started developing in 2013
-description: I guide myself on Android on the various projects that <a href="https://github.com/JakeWharton">Jake Wharton</a> publishes to the open source community. Some of the libraries that I <br/> normally work with are <b> Retrofit</b>, <b>Otto</b> and <b>OkHttp</b>.
+description: I guide myself on the various projects that <a href="https://github.com/JakeWharton">Jake Wharton</a> publishes to the open source community. Some of the libraries that I <br/> normally work with are <b> Retrofit</b>, <b>Otto</b> and <b>OkHttp</b>.
 
 ---
