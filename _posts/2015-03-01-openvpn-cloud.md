@@ -14,9 +14,7 @@ The post was heavilly based on DigitalOcean instruction: [How To Run OpenVPN in 
 
 1. If you don't have create a digital ocean account. They give you 10$ to start and have a great service. If you start a new account you can use my [referral link](https://www.digitalocean.com/?refcode=beed9a7630ab).
 
-2. Download docker-machine and create the remote host with docker:
-
-Commands:
+### Download docker-machine and create the remote host with docker:
 
     # Fetch docker machine
     wget https://github.com/docker/machine/releases/download/v0.1.0/docker-machine_linux-amd64 -O docker-machine && chmod a+x docker-machine
