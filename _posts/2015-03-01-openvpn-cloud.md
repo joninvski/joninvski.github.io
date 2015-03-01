@@ -7,11 +7,15 @@ short_summary: "This post will explain how to quickly setup an openVpn container
 
 ---
 
-# Setup host on the cloud with docker
+### Setup host on the cloud with docker
+
+This post will give you the commands to install an openVpn server on digitalocean and how to configure a linux client.
+The post was heavilly based on DigitalOcean instruction: [How To Run OpenVPN in a Docker Container on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-run-openvpn-in-a-docker-container-on-ubuntu-14-04?utm_medium=social&utm_source=twitter&utm_campaign=openvpn_docker_ubuntu_tut&utm_content=image)
 
 1. If you don't have create a digital ocean account. They give you 10$ to start and have a great service. If you start a new account you can use my [referral link](https://www.digitalocean.com/?refcode=beed9a7630ab).
 
-2. Download docker-machine and create the remote host with docker
+2. Download docker-machine and create the remote host with docker:
+
 
     # Fetch docker machine
     wget https://github.com/docker/machine/releases/download/v0.1.0/docker-machine_linux-amd64 -O docker-machine && chmod a+x docker-machine
