@@ -16,6 +16,7 @@ The post was heavilly based on DigitalOcean instruction: [How To Run OpenVPN in 
 
 2. Download docker-machine and create the remote host with docker:
 
+Commands:
 
     # Fetch docker machine
     wget https://github.com/docker/machine/releases/download/v0.1.0/docker-machine_linux-amd64 -O docker-machine && chmod a+x docker-machine
