@@ -5,30 +5,26 @@ permalink: "/blog/"
 
 ---
 
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="posts">
-                    {% for post in site.posts %}	
-                        {% if post.type == "blog" %}
-                            <div class="blog-entry">
-                            <h3>
-                                <a href="{{ post.url }}">{{ post.title }}</a>
-                                <small>
-                                    {{ post.date | date: "%B %e, %Y" }} 
-                                </small>
-                            </h3>
+<div class="container blog-all">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="posts">
+                {% for post in site.posts %}
+                {% if post.type == "blog" %}
+                <div class="blog-entry">
+                    <h1 class="post-title">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h1>
+                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
 
-                <div class="short-summary">
-                    {{ post.short_summary }}
+                    {{ post.content }}
                 </div>
-
-                <a href="{{post.url}}">Read all</a>
-                </div>
-        {% endif %}	
-        {% endfor %}	
+                <hr/>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
-        </div>
+        <div class="col-md-2"></div>
     </div>
-</section>
+</div>

@@ -25,15 +25,26 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+.post-all{
+    background: white;
+    padding-top: 20px;
+}
+
+.blog-all{
+    background: white;
+    padding-top: 20px;
+}
+
+.post-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    color: #303030;
+}
+
+.post-date {
+    color: #9a9a9a;
+    margin-bottom: 2rem; 
+    display: block;
 }
 
 hr.star-light,
@@ -77,6 +88,11 @@ hr.star-primary:after {
 
 .img-centered {
     margin: 0 auto;
+}
+
+.section-front {
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
 header {
@@ -135,7 +151,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     .navbar-fixed-top {
-        padding: 25px 0;
+        padding: 10px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -149,7 +165,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 0px 0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
@@ -181,7 +197,7 @@ header .intro-text .skills {
 }
 
 section {
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 section h2 {
@@ -340,20 +356,20 @@ footer {
 }
 
 footer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 footer .footer-above {
-    padding-top: 50px;
+    padding-top: 10px;
     background-color: #{{ site.color.secondary }};
 }
 
 footer .footer-col {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 footer .footer-below {
-    padding: 25px 0;
+    padding: 5px 0;
     background-color: #{{ site.color.secondary-dark }};
 }
 
