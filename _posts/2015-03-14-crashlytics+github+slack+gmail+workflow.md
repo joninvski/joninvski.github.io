@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crashlytics+Github+Gmail+Slack crash management workflow
+title: Crashlytics + Github + Gmail + Slack crash management workflow
 comments: True
 type: "blog"
 short_summary: "Short explanation on my crash management workflow at walletsaver.com"
