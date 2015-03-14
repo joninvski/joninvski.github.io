@@ -17,8 +17,9 @@ permalink: "/blog/"
                         <a href="{{ post.url }}">{{ post.title }}</a>
                     </h1>
                     <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-
-                    {{ post.content }}
+                    <article>
+                        {{ post.content }}
+                    </article>
                 </div>
                 <hr/>
                 {% endif %}
