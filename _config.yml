@@ -2,11 +2,10 @@
 title: Home
 email: trindade.joao@gmail.com
 url: https://joaoptrindade.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+description: "Homepage for Joao Trindade, Android Developer, PhD in computer engineering and all around geek."
 
 author: Joao Trindade
 
-# Contact form: comment the line below if you want to stick with the default PHP contact form
 contact: static
 
 # Color settings (hex-codes without the leading hash-tag)
