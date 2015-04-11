@@ -44,7 +44,10 @@ credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a
 
 # Build settings
 markdown: kramdown
+# markdown: redcarpet
 permalink: "/:title"
 
 gems:
   - jekyll-sitemap
+  - jemoji
+  - pygments.rb	

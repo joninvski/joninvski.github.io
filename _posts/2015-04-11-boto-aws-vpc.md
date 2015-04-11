@@ -7,18 +7,32 @@ short_summary: "One of the best things on AWS is that evertything is can be mana
 
 ---
 
+In this post we are going to create a virtual private network (VPC) on AWS, then create two instances and a database.
+
+
+First step is to install boto:
 
 {% highlight python %}
-import time
+sudo pip install boto
+{% endhighlight %}
+
+If using debian/derivative please note that the boto version could be really old. It is better to just use pip.
+
+Now open a python (or better ipython) terminal and lets interact AWS. 
+
+First import the modules for interacting with aws ec2, vpc and rds2
+
+{% highlight python %}
 import boto.ec2
 import boto.vpc
 import boto.rds2
-import os
-import shutil
-from boto.manage.cmdshell import sshclient_from_instance
+{% endhighlight %}
 
+We can now set some constants we will use for this test:
+
+{% highlight python %}
 ###### Configurations ######
-PROJECT                    = "Testing"
+PROJECT                    = "Testing"            # This is the tag name for all resources
 ACCESS_KEY                 = "SECRET"
 SECRET_KEY                 = "SECRET"
 
@@ -26,7 +40,7 @@ REGION_NAME                = 'us-west-2'
 FIRST_REGION_NAME          = REGION_NAME + 'a'
 SECOND_REGION_NAME         = REGION_NAME + 'b'
 THIRD_REGION_NAME          = REGION_NAME + 'c'
-AMI_IMAGE                  = "ami-e7527ed7"          # For us-west
+AMI_IMAGE                  = "ami-e7527ed7"       # For us-west
 
 DB_AVAILABILITY_ZONE       = FIRST_REGION_NAME
 DB_AUTO_BACKUP_DAYS        = 0
@@ -37,10 +51,12 @@ MACHINE_SIZE               = "t2.small"
 DB_STORAGE_GB               = 10
 DB_CLASS                    = "db.t2.small"
 ###### End configurations #####
+{% endhighlight %}
 
-def nTag(what):
-    return {'Name': PROJECT + str(what), 'PROJECT': PROJECT}
 
+First step let's sign in to AWS and get a connection object for ec2, vpc and rds.
+
+{% highlight python %}
 def connect():
     """
     Create the ec2, vpc and rds connections
@@ -59,4 +75,5 @@ def connect():
 
     return e, v, r
 
+e, v, r = connect()
 {% endhighlight %}
