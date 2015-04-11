@@ -211,6 +211,7 @@ section {
 section h2 {
     margin: 0;
     font-size: 3em;
+    padding-top: 30px;
 }
 
 section.success {
