@@ -377,11 +377,6 @@ footer .footer-col {
     margin-bottom: 10px;
 }
 
-footer .footer-below {
-    padding: 5px 0;
-    background-color: #{{ site.color.secondary-dark }};
-}
-
 .btn-social {
     display: inline-block;
     width: 50px;
