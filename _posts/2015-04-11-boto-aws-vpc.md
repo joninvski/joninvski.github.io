@@ -9,16 +9,16 @@ short_summary: "One of the best things on AWS is that evertything is can be mana
 
 In this post we are going to create a virtual private network (VPC) on AWS, then create two instances and a database.
 
-* First step is to install boto:
+First step is to install boto:
 
 {% highlight python %}
 sudo pip install boto
 {% endhighlight %}
 
- * If using debian/derivative please note that the boto version could be really old. It is better to just use pip.
+If using debian/derivative please note that the boto version could be really old. It is better to just use pip.
 
-* Now open a python (or better ipython) terminal and lets interact AWS. 
- * First import the modules for interacting with aws ec2, vpc and rds2
+Now open a python (or better ipython) terminal and lets interact AWS.
+First import the modules for interacting with aws ec2, vpc and rds2
 
 {% highlight python %}
 import boto.ec2
@@ -26,7 +26,7 @@ import boto.vpc
 import boto.rds2
 {% endhighlight %}
 
-* We can now set some constants we will use for this test:
+We can now set some constants we will use for this test:
 
 {% highlight python %}
 ###### Configurations ######
@@ -54,7 +54,7 @@ DB_CLASS                    = "db.t2.small"
 ###### End configurations #####
 {% endhighlight %}
 
-* Now let's sign in to AWS and get a connection object for ec2, vpc and rds.
+Now let's sign in to AWS and get a connection object for ec2, vpc and rds.
 
 {% highlight python %}
 def connect():
@@ -78,7 +78,7 @@ def connect():
 e, v, r = connect()
 {% endhighlight %}
 
-* Create the private network and allow instances to have public dns and ips:
+Create the private network and allow instances to have public dns and ips:
 
 {% highlight python %}
 vpc = v.create_vpc('10.2.0.0/16')
@@ -86,7 +86,7 @@ v.modify_vpc_attribute(vpc.id, enable_dns_support=True)
 v.modify_vpc_attribute(vpc.id, enable_dns_hostnames=True)
 {% endhighlight %}
 
-* Create the network subnets (one in each region, and connect then all to the internet gateway)
+Create the network subnets (one in each region, and connect then all to the internet gateway)
 
 {% highlight python %}
 # Create network acl
@@ -114,7 +114,7 @@ v.associate_route_table(route_table.id, subnet_second.id)
 v.associate_route_table(route_table.id, subnet_third.id)
 {% endhighlight %}
 
-* Create the security groups that our instances will be in and their ssh keys
+Create the security groups that our instances will be in and their ssh keys
 
 {% highlight python %}
 # Create a new VPC security group
