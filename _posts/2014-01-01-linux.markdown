@@ -5,7 +5,7 @@ date: 2014-07-16
 img: linux.png
 type: portfolio
 alt: image-alt
-experience: Using exclusive since 2003
+experience: Using exclusively (and proud of it) since 2003
 description: I remember my first linux distro, Slackware 8.1, and the trouble it was to put the PCMCIA WIFI card working. Since then I've been using Linux exclusively as my operating system.
 
 ---
