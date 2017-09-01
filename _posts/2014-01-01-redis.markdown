@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 4
+date: 2014-07-15
+img: redis.png
+type: portfolio
+alt: image-alt
+experience: Started using in early 2015
+description: In-memory data structure store with a lot of cool commands. Small secret - It is single threaded!
+
+---
