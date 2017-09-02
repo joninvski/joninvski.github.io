@@ -3,6 +3,7 @@ layout: default
 modal-id: 1
 date: 2014-07-18
 img: android.png
+order: 1
 type: portfolio
 alt: image-alt
 experience: Started developing in 2013

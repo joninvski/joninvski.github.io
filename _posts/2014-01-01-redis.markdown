@@ -2,6 +2,7 @@
 layout: default
 modal-id: 4
 date: 2014-07-15
+order: 7
 img: redis.png
 type: portfolio
 alt: image-alt

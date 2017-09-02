@@ -2,6 +2,7 @@
 layout: default
 modal-id: 5
 date: 2014-01-11
+order: 3
 img: docker.png
 type: portfolio
 alt: image-alt
