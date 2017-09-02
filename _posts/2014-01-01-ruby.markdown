@@ -1,12 +1,12 @@
 ---
 layout: default
-modal-id: 3
+modal-id: 8
 date: 2014-07-17
 order: 8
 img: ruby.png
 type: portfolio
 alt: image-alt
-experience: Been using Matz creation since since 2015. 
+experience: Been using Matz creation since 2015. 
 description: Extremely flexible and powerful. Good to get things done.
 
 ---

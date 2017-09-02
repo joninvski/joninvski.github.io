@@ -1,13 +1,13 @@
 ---
 layout: default
-modal-id: 6
+modal-id: 2
 date: 2014-07-15
 order: 2
 img: aws.png
 alt: image-alt
 project-date: April 2014
 type: portfolio
-experience: Started using in early 2015
-description: Still a newbie but learning how to work with Amazon Web Services. I was given a 1000$ voucheur to learn and will spend 2015 working with this service.
+experience: Got a 1000$ voucher early 2015 and have been using it since then
+description: So many services... Where should i start?
 
 ---
