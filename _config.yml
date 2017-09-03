@@ -47,7 +47,8 @@ markdown: kramdown
 # markdown: redcarpet
 permalink: "/:title"
 
-gems:
+plugins:
   - jekyll-sitemap
   - jemoji
   - pygments.rb	
+  - jekyll-gist
