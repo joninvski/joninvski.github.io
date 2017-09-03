@@ -43,7 +43,7 @@ a.active {
 
 .post-date {
     color: #9a9a9a;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
     display: block;
 }
 
@@ -150,10 +150,7 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em;
     }
-}
 
-
-@media(min-width:768px) {
     .navbar-fixed-top {
         padding: 0px 0;
         -webkit-transition: padding .3s;
@@ -178,6 +175,10 @@ header .intro-text .skills {
         font-size: 1.3em;
         padding-top: 19.5px;
         padding-bottom: 19.5px;
+    }
+
+    .image-portfolio {
+      max-width: 60%;
     }
 }
 
@@ -226,6 +227,10 @@ section.success {
 
     section.first {
         padding-top: 75px;
+    }
+
+    .image-portfolio {
+      max-width: 80%;
     }
 }
 
@@ -280,7 +285,7 @@ section.success {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -416,7 +421,7 @@ footer .footer-col {
 }
 
 .portfolio-modal .modal-content {
-    padding: 100px 0;
+    padding: 10px 0;
     min-height: 100%;
     border: 0;
     border-radius: 0;
