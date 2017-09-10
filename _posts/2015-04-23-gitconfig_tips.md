@@ -10,40 +10,41 @@ short_summary: "A quick summary of my git aliases"
 
 First of all let's set vim to do usefull things. Whenever we need to merge or when git difftool is called we use our old trusted vim editor in the diff mode.
 
-{% highlight console %}
+```
 [merge]
     tool = vimdiff
 [diff]
     tool = vimdiff
 [difftool]
     prompt = false
-{% endhighlight %}
+```
 
 Extremelly important is to setup our name and email, so all our commits have the same user id. In the user group we also set less as our default pager.
 
-{% highlight console %}
+```
 [user]
     name = Joao Trindade
     email = trindade.joao@gmail.com
     pager = less -FRSX
-{% endhighlight %}
+```
 
 This is one of the most interesting configuration. Have you ever did *git puhs*. Well no problem. Git will detect your error and correct it after a pause of 1 second.
 
-{% highlight console %}
+```
 [help]
     autocorrect = 1
-{% endhighlight %}
+```
 
 Indicate to use color on git command outputs whenever possible
 
-{% highlight console %}
+```
 [color]
     ui = auto
-{% endhighlight %}
+```
 
 Finally the git aliases
-{% highlight console %}
+
+```
 [alias]
     lg = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     plog = log -p
@@ -60,13 +61,13 @@ Finally the git aliases
     notmerged = branch --no-merged
     delete-merged-branches = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
     sign = commit -s
-{% endhighlight %}
+```
 
 Let's go trough each alias at a time:
 
 * **lg** - Shows a branch history of our repo. Example:
 
-{% highlight console %}
+```
   61d5349 - (HEAD, origin/master, origin/HEAD, master) Merge pull request #28 ...
   |\
   | * 8546773 - Upgrading android gradle plugin to 0.12.+ version. ...
@@ -77,7 +78,7 @@ Let's go trough each alias at a time:
   * |   e630bd7 - Merge pull request #18 from ChristianBecker/version0110 ...
   |\ \
   | * | 3424ec2 - Fixed Travis integration (10 months ago) <Christian Becker>
-{% endhighlight %}
+```
 
 * **plog** - Shows the commit log history, with the changes for each commit
 * **slog** - Shows the commit log history, with only a small summary (like git status) for each commit
@@ -85,11 +86,11 @@ Let's go trough each alias at a time:
 * **staged** - Shows the diffs of what has been put on staged (things you did git add)
 * **st** - Shorter git status. Example:
 
-{% highlight console %}
-    ## featXbranch...origin/featureXbranch
-      M walletsaver/settings.py
-      M wscore/recommender.py
-{% endhighlight %}
+```
+ ## featXbranch...origin/featureXbranch
+  M walletsaver/settings.py
+  M wscore/recommender.py
+```
 
 * **a** - Short for add
 * **cob** - Short for git checkout branch
