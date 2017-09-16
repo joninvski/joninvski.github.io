@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Usefull gitconfig configurations and aliases
+title: Useful gitconfig configurations and aliases
 comments: True
 type: "blog"
-short_summary: "A quick summary of my git aliases"
+short_summary: "A quick summary of my git aliases. These shortcuts speed up your normal workflow and help you use git better."
 
 ---
 

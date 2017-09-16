@@ -3,7 +3,7 @@ layout: post
 title: Unable to connect to EC2 instance in custom VPC
 comments: True
 type: "blog"
-short_summary: "Important lesson: If when creating EC2 instance on custom VPCs you are unable to ssh to them, blame the gateway..."
+short_summary: "Important lesson: When creating EC2 instance on custom VPCs, if you are unable to ssh to them, blame the gateway..."
 
 ---
 
