@@ -27,7 +27,7 @@ services:
     volumes:
       - .:/usr/src/app
     environment:
-      - BOOT_LOCAL_REPO=/usr/src/app
+      - BOOT_LOCAL_REPO=/usr/src/app/.m2
       - REPL_PORT
       - REPL_HOST
     ports:
@@ -52,4 +52,4 @@ docker-compose run --service-ports repl
 Notes:
 
  * `--service-ports` parameter tells docker-compose to use the specified ports.
- * `BOOT_LOCAL_REPO` env var indicates where to store the dependencies. Here we're pointing them to `/usr/src/app` that is mapped to the current host directory. This way whenever you start new `repl` containers they will not need to "refetch" the dependencies.
+ * `BOOT_LOCAL_REPO` env var indicates where to store the dependencies. Here we're pointing them to `/usr/src/app/.m2` that is mapped to the current host directory. This way whenever you start new `repl` containers they will not need to "refetch" the dependencies.
