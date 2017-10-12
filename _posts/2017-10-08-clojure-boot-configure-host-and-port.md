@@ -20,6 +20,7 @@ Try it for yourself, you can use the following `docker-compose.yml` file
 ```
 version: "2.1"
 
+services:
   repl:
     image: clojure:boot-alpine
     working_dir: /usr/src/app
