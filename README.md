@@ -6,8 +6,15 @@ Source for the website: http://joaoptrindade.com
 
 Just run:
 
-    jekyll --server
+    jekyll serve
 
 Then point your browser to:
 
     http://localhost:4000
+
+## Optimize image size
+
+Try to run this everytime you add an image
+
+    optipng -o7 **/*.png
+
