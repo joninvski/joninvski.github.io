@@ -3,7 +3,7 @@ layout: post
 title: How to setup SSL for github custom domain 
 comments: True
 type: "blog"
-short_summary: "If you are hosting your website in github and using a custom domain then your SSL certificate will not work. But you can use cloudfare for free to fix this."
+short_summary: "If you are hosting your website in github and using a custom domain then your SSL certificate will not work. But you can use cloudfare for free and solve this problem."
 
 ---
 
