@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 permalink: "/blog/"
+short_summary: Tech blog about functional programming, containers and other cool geeky stuff.
 
 ---
 
