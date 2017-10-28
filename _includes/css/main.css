@@ -99,8 +99,7 @@ hr.star-primary:after {
 }
 
 .section-front {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 header {
@@ -110,8 +109,8 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 header .container-page {
@@ -121,7 +120,7 @@ header .container-page {
 
 header img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
 }
 
 header .intro-text .name {
@@ -212,7 +211,7 @@ section {
 section h2 {
     margin: 0;
     font-size: 3em;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 section.short-summary {
@@ -226,7 +225,7 @@ section.short-summary a {
 
 @media(max-width:767px) {
     section {
-        padding: 75px 0;
+        padding: 20px 0;
     }
 
     section.first {
