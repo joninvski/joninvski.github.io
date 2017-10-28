@@ -215,9 +215,9 @@ section h2 {
     padding-top: 30px;
 }
 
-section.success {
+section.short-summary {
     color: #fff;
-    background: #{{ site.color.primary }};
+    background: #6c1e1e;
 }
 
 @media(max-width:767px) {
