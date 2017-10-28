@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to do a personal webpage in githug
+title: How to do a personal webpage in Github
 comments: True
 type: "blog"
-short_summary: "While Creating the blog with Jekkil I noticed that it is also possible to do a really nice personal website"
+short_summary: "While Creating the blog with Jekkil I noticed that it is possible to do a really nice personal website"
 
 ---
 
