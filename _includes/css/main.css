@@ -220,6 +220,10 @@ section.short-summary {
     background: #6c1e1e;
 }
 
+section.short-summary a {
+    color: #18bc9c;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
