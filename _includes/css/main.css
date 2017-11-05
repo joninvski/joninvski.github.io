@@ -150,14 +150,14 @@ header .intro-text .skills {
         font-size: 1.75em;
     }
 
-    .navbar-fixed-top {
+    .navbar-top {
         padding: 0px 0;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
     }
 
-    .navbar-fixed-top .navbar-brand {
+    .navbar-top .navbar-brand {
         font-size: 1.2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
@@ -166,11 +166,11 @@ header .intro-text .skills {
         padding-bottom: 19.5px;
     }
 
-    .navbar-fixed-top.navbar-shrink {
+    .navbar-top.navbar-shrink {
         padding: 0px 0;
     }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
+    .navbar-top.navbar-shrink .navbar-brand {
         font-size: 1.3em;
         padding-top: 19.5px;
         padding-bottom: 19.5px;
