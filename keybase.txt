@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/joaotrindade
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://joaoptrindade.com
+  * I am joaotrindade (https://keybase.io/joaotrindade) on keybase.
+  * I have a public key ASD9UyzVe2ZdTlhoUYbavD8GYubD-rwai-7N99rjSU87Xwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fd532cd57b665d4e58685186dabc3f0662e6c3fabc1a8beecdf7dae3494f3b5f0a",
+      "host": "keybase.io",
+      "kid": "0120fd532cd57b665d4e58685186dabc3f0662e6c3fabc1a8beecdf7dae3494f3b5f0a",
+      "uid": "2666a1f1395c351b9d5c589a9efd1b19",
+      "username": "joaotrindade"
+    },
+    "merkle_root": {
+      "ctime": 1510241260,
+      "hash": "16c96b9bed26c77aa15e7edc520ab03023c42b58f2130c4a17e521af9b72bca6e986bedfbf2dd00755f68cb8c7f0edb4a194e30dfb08afa8a65c51f05a0f1999",
+      "hash_meta": "546028dc65fb7ea09a63b7455f5b59cc9c4dc57d939f28fe00f4ef970931b60a",
+      "seqno": 1685633
+    },
+    "service": {
+      "hostname": "joaoptrindade.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.35"
+  },
+  "ctime": 1510241275,
+  "expire_in": 504576000,
+  "prev": "81e4eaa3c6c8d02160282a1a470c37e2f809a98cf50363b15e74257fd88c3559",
+  "seqno": 21,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/VMs1XtmXU5YaFGG2rw/BmLmw/q8Govuzffa40lPO18Kp3BheWxvYWTFA057ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZmQ1MzJjZDU3YjY2NWQ0ZTU4Njg1MTg2ZGFiYzNmMDY2MmU2YzNmYWJjMWE4YmVlY2RmN2RhZTM0OTRmM2I1ZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZmQ1MzJjZDU3YjY2NWQ0ZTU4Njg1MTg2ZGFiYzNmMDY2MmU2YzNmYWJjMWE4YmVlY2RmN2RhZTM0OTRmM2I1ZjBhIiwidWlkIjoiMjY2NmExZjEzOTVjMzUxYjlkNWM1ODlhOWVmZDFiMTkiLCJ1c2VybmFtZSI6ImpvYW90cmluZGFkZSJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxMDI0MTI2MCwiaGFzaCI6IjE2Yzk2YjliZWQyNmM3N2FhMTVlN2VkYzUyMGFiMDMwMjNjNDJiNThmMjEzMGM0YTE3ZTUyMWFmOWI3MmJjYTZlOTg2YmVkZmJmMmRkMDA3NTVmNjhjYjhjN2YwZWRiNGExOTRlMzBkZmIwOGFmYThhNjVjNTFmMDVhMGYxOTk5IiwiaGFzaF9tZXRhIjoiNTQ2MDI4ZGM2NWZiN2VhMDlhNjNiNzQ1NWY1YjU5Y2M5YzRkYzU3ZDkzOWYyOGZlMDBmNGVmOTcwOTMxYjYwYSIsInNlcW5vIjoxNjg1NjMzfSwic2VydmljZSI6eyJob3N0bmFtZSI6ImpvYW9wdHJpbmRhZGUuY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzUifSwiY3RpbWUiOjE1MTAyNDEyNzUsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiODFlNGVhYTNjNmM4ZDAyMTYwMjgyYTFhNDcwYzM3ZTJmODA5YTk4Y2Y1MDM2M2IxNWU3NDI1N2ZkODhjMzU1OSIsInNlcW5vIjoyMSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDcsAvC5SXu79apRo7OTiXquCkqNA9MLpaavG/bNL3pcZUdCUqK78Orm5fakCPfKD8Tlqsp7DEQSTLR4S8M8yQEqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg2m4bn3o3pko6nz8E2namsjP6BXN12l2BB3DVLK8E61KjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joaotrindade
+
+==================================================================
