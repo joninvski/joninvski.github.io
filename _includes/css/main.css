@@ -43,8 +43,14 @@ a.active {
 
 .post-date {
     color: #9a9a9a;
-    margin-bottom: 2rem;
     display: block;
+}
+
+.post-keywords {
+    color: #9a9a9a;
+    display: block;
+    margin-top: -8px;
+    margin-bottom: 2rem;
 }
 
 article img {
@@ -499,4 +505,9 @@ footer .footer-col {
 
 .blog-entry {
     padding-top: 0px;
+}
+
+.keywords {
+    padding-top: 10px;
+    display: block;
 }

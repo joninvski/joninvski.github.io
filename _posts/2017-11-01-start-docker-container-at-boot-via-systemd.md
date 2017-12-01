@@ -4,6 +4,7 @@ title: Start docker container at boot using systemd
 comments: True
 type: "blog"
 short_summary: "You can use systemd to start docker containers whenever a system boots up. This can be extremely useful if you are creating autoscale images for AWS."
+keywords: ["docker", "AWS"]
 
 ---
 

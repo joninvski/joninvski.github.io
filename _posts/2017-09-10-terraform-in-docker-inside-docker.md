@@ -4,6 +4,7 @@ title: Terraform in docker inside another docker
 comments: True
 type: "blog"
 short_summary: "Docker recursion: How to create containers with terraform on a docker inside another docker. Useful to quickly test terraform without having to use AWS or similar."
+keywords: ["docker", "AWS"]
 
 ---
 

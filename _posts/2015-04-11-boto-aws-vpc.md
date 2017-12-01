@@ -4,6 +4,7 @@ title: Use boto to interact with AWS
 comments: True
 type: "blog"
 short_summary: "One of the best things on AWS is that everything is can be managed by an API. In this post we will use boto to interact with AWS in python, create several ec2 instances, configure a vpc and a rds database."
+keywords: ["python", "aws"]
 
 ---
 

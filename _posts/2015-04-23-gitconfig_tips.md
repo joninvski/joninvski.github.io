@@ -4,6 +4,7 @@ title: Useful gitconfig configurations and aliases
 comments: True
 type: "blog"
 short_summary: "A quick summary of my git aliases. These shortcuts speed up your normal workflow and help you use git better."
+keywords: ["git"]
 
 ---
 

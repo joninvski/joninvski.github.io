@@ -4,6 +4,7 @@ title: Setup private VPN on the cloud
 comments: True
 type: "blog"
 short_summary: "See how to quickly setup an openVpn container using docker and how to configure a Linux client to use that VPC"
+keywords: ["docker", "bash"]
 
 ---
 

@@ -8,11 +8,19 @@ layout: page
         <div class="col-md-8">
 
             <article class="post">
-
                 <h1 class="post-title">
                     <a href="{{ post.url }}">{{ page.title }}</a>
                 </h1>
                 <span class="post-date">{{ page.date | date: "%B %e, %Y" }}</span>
+                <span class="post-keywords">
+                    {% if page.keywords %}
+                      <span class="keywords">Labels: 
+                      {% for keyword in page.keywords %}
+                        <a href="{{ site.url }}/sitemap.html#{{ keyword }}">{{ keyword }}</a>{% if forloop.last == false %},{% endif %} 
+                      {% endfor %}
+                      </span>
+                      {% endif %}
+                </span>
 
                 {{ content }}
 

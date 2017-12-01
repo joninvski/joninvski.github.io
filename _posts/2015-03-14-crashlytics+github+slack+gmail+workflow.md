@@ -4,6 +4,7 @@ title: Crashlytics + Github + Gmail + Slack crash management workflow
 comments: True
 type: "blog"
 short_summary: "Short explanation on my crash management workflow for the android app of walletsaver.com"
+keywords: ["android"]
 
 ---
 

@@ -21,6 +21,13 @@ short_summary: Tech blog about functional programming, containers and other cool
                     <article>
                         {{ post.short_summary }}
                     </article>
+                    {% if post.keywords %}
+                      <span class="keywords">Labels: 
+                      {% for keyword in post.keywords %}
+                        <a href="{{ site.url }}/sitemap.html#{{ keyword }}">{{ keyword }}</a>{% if forloop.last == false %},{% endif %} 
+                      {% endfor %}
+                      </span>
+                      {% endif %}
                 </div>
                 <hr/>
                 {% endif %}

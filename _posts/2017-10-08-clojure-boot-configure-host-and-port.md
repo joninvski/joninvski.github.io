@@ -4,6 +4,7 @@ title: Configure host and port when starting clojure's boot
 comments: True
 type: "blog"
 short_summary: "Using clojure's boot inside a docker container means you need to configure and expose the correct port for your repl server. Here's how to do it."
+keywords: ["clojure", "docker"]
 
 ---
 

@@ -4,6 +4,7 @@ title: Reduce png image size
 comments: True
 type: "blog"
 short_summary: "Quick tutorial on how to reduce size of png images without any loss of quality."
+keywords: ["bash"]
 
 ---
 
