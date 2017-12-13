@@ -54,7 +54,7 @@ Our boxes will now be described as agents:
 ```clojure
 (require 'clojure.core.async) ;; you need to require clojure.async
 
-(def box-a (agent {:items 1 :value 1)})
+(def box-a (agent {:items 1 :value 1}))
 ```
 
 And our requesters need to [dereference](https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/deref) the agent to look at the box value. This can be done with the `deref` function or with the `@` alias.
@@ -129,7 +129,7 @@ Putting it all together, and including a benchmark at the end just for fun:
 
 ```clojure
 (ns main
-  (:require [clojure.core.async :refer (go <!! >! chan)]
+  (:require [clojure.core.async :refer (go <!! <! >! timeout chan)]
             [criterium.core :refer (bench with-progress-reporting)])
   (:gen-class))
 
@@ -137,6 +137,10 @@ Putting it all together, and including a benchmark at the end just for fun:
   (agent {:id id :items 1 :value 1}))
 
 (def all-boxes (doall (map create-box (range 0 1000))))
+
+(defn- non-blocking-sleep [ms]
+ (<! (timeout ms))) ;; Thread/sleep will hold the thread, while timeout will not.
+                    ;; It is important to not block in go blocks
 
 (defn work [box]
   (Thread/sleep 100) ;; lets pretend putting a item in the box is slow
@@ -146,7 +150,7 @@ Putting it all together, and including a benchmark at the end just for fun:
  (while true
   (let [box (rand-nth all-boxes)]
    (send box work)
-   (Thread/sleep 200))))
+   (non-blocking-sleep 200))))
 
 (defn interested? [box]
   (let [min-value 5
@@ -171,7 +175,7 @@ Putting it all together, and including a benchmark at the end just for fun:
       (dorun (map #(send % interested-aux? channel) all-boxes))
       (wait-for-responses channel n-boxes))))
 
-(dotimes [_ 10] (go (create-worker)))
+(dotimes [_ 10] (go create-worker)) ;; We 10 workers to change the boxes asynchronously
 
 (with-progress-reporting (bench (time (create-requester))))
 ```
