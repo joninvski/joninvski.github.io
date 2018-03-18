@@ -578,9 +578,9 @@ We can do the require inside the `ns` macro.
             [clj-http.client]))
 ```
 
-Finally so no not have to do `clj-http.client/get` whenever we want to do a get request, we can do an alias of `clj-http` to `http`. Same thing for `cheshire.core`, we can alias it to `json`. Don't forget to then change the `get-planets` function to use these alias.
+Finally to not have to write `clj-http.client/get` whenever we want to perform a get request, we can do an alias of `clj-http` to `http`. Same thing for `cheshire.core`, we can alias it to `json`. Don't forget to then change the `get-planets` function to use these alias.
 
-Final `src/sw_planets.clj` file:
+Final `src/sw_planets.clj` file with these changes should look like this:
 
 ```clojure
 (ns sw-planets
