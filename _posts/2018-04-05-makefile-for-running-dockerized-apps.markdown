@@ -10,12 +10,14 @@ keywords: ["docker", "bash", "clojure"]
 
 Let's say we have a small clojure app with two files:
 
-* **build.boot**
+**build.boot**
+
 ```clojure
 (set-env! :resource-paths #{"src"})
 ```
 
-* **src/hello.clj**
+**src/hello.clj**
+
 ```clojure
 (ns hello)
 
@@ -43,7 +45,7 @@ Create a **Makefile** with the run target:
 
 ```make
 run:
-  docker run --rm -e BOOT_LOCAL_REPO=/usr/src/app/.m2 -it -w /usr/src/app -v ${PWD}:/usr/src/app clojure:boot-alpine \
+	docker run --rm -e BOOT_LOCAL_REPO=/usr/src/app/.m2 -it -w /usr/src/app -v ${PWD}:/usr/src/app clojure:boot-alpine \
      boot run
 ```
 
@@ -53,10 +55,10 @@ Now you can run simply by doing:
 make run
 ```
 
-It is normally also useful to add a REPL target to the makefile:
+It is also useful to add a REPL target to the makefile:
 
 ```make
 repl:
-  docker run --rm -e BOOT_LOCAL_REPO=/usr/src/app/.m2 -it -w /usr/src/app -v ${PWD}:/usr/src/app clojure:boot-alpine \
+	docker run --rm -e BOOT_LOCAL_REPO=/usr/src/app/.m2 -it -w /usr/src/app -v ${PWD}:/usr/src/app clojure:boot-alpine \
      boot repl
 ```
