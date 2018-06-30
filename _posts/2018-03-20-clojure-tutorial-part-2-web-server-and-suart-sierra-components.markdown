@@ -8,8 +8,6 @@ keywords: ["clojure"]
 
 ---
 
-# Clojure tutorial (Lesson 2)
-
 * [Prerequisites](#prerequisites)
 * [Web server](#web-server)
   * [Respond to GET](#1-respond-to-get)
@@ -21,7 +19,7 @@ This is part two of the clojure tutorial. Here we will start answering HTTP requ
 
 ## Prerequisites
 
-1. If you never touched clojure doing [lesson1](https://github.com/joninvski/clojure-tutorial/blob/master/lesson1.md) first should prove useful.
+1. If you never touched clojure doing [tutorial 1](clojure-tutorial-part-1-http-requests) first should prove useful.
 
 ## Web server
 

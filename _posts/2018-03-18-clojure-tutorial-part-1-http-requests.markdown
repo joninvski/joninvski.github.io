@@ -8,8 +8,6 @@ keywords: ["clojure"]
 
 ---
 
-# Clojure tutorial (Lesson 1)
-
 * [Objective](#objective)
 * [Prerequisites](#prerequisites)
 * [Get a repl working](#get-a-repl-working)

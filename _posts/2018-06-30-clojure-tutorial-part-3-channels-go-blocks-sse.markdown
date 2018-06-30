@@ -20,8 +20,8 @@ Learn learn about the basic build blocks to do asynchronous programming in cloju
 
 ## Prerequisites
 
-1. If you never touched clojure doing [lesson 1](https://github.com/joninvski/clojure-tutorial/blob/master/lesson1.md) first should prove useful.
-2. This tutorial will build on top of the examples of [lesson 2](https://github.com/joninvski/clojure-tutorial/blob/master/lesson2.md) but its not mandatory if you only want to understand the concepts.
+1. If you never touched clojure doing [tutorial 1](clojure-tutorial-part-1-http-requests) first should prove useful.
+2. This tutorial will build on top of the examples of [tutorial 2](clojure-tutorial-part-2-web-server-and-suart-sierra-components) but it's not mandatory if you only want to understand the concepts.
 
 ## Channels 
 
