@@ -25,7 +25,7 @@ Learn learn about the basic build blocks to do asynchronous programming in cloju
 
 ## Channels 
 
-A channel is similar to a Unix pike. You produce something on one side, and someone in the other side can consume it. Channels in clojure are part of the library `clojure.core.async` that you can require like this:
+A channel is similar to a Unix pipe. You produce something on one side, and someone in the other side can consume it. Channels in clojure are part of the library `clojure.core.async` that you can require like this:
 
 ```clojure
 (require '[clojure.core.async :as async])
