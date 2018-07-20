@@ -1,3 +1,12 @@
+---
+layout: post
+title: HTTpie examples
+comments: True
+type: "blog"
+short_summary: "Small cheatsheet containing examples on how to use HTTPie (curl replacement)"
+keywords: ["clojure"]
+
+---
 
 CURL is the default tool to do HTTP requests from the command line.
 HTTPie tries to improve it by making it more user friendly, including a
@@ -5,21 +14,23 @@ more natural syntax and colorized output.
 
 Install it via the instructions on [Installation Page](https://github.com/jakubroztocil/httpie#2installation).
 
+To use it do:
+
 ```
 http https://swapi.co/api
 ```
 
-Only see the headers
+Only see the headers (`h`)
 
 ```
-http -p h https://swapi.co/api
+http -p 'h' https://swapi.co/api
 ```
 
 
-Only print the body
+Only print the body (`b`)
 
 ```
-http -p b https://swapi.co/api
+http -p 'b' https://swapi.co/api
 ```
 
 Use different HTTP action
@@ -36,12 +47,6 @@ Print the request headers
 http -p 'H' https://swapi.co/api/films/1
 ```
 
-Print the request headers
-
-```
-http -p 'H' https://swapi.co/api/films/1
-```
-
 Define and print the request body in JSON format.
 Note the `Content-Type` header.
 
@@ -49,17 +54,17 @@ Note the `Content-Type` header.
 http --print 'HB' POST https://swapi.co/api/films/1  rating='123'
 ```
 
-Define and print the request body in form enconded format
-Note the `Content-Type` header.
+Define and print the request body in form encoded format
+Again note the `Content-Type` header.
 
 ```
-# Note the `Content-Type` header
 http --print 'HB' -f POST https://swapi.co/api/films/1  rating='123'
 ```
 
-Pass parameter via URL string
+Pass parameter via URL string. Check the URL path in the first line:
 
 ```
-# Note the `Content-Type` header
 http --print 'HB' POST https://swapi.co/api/films/1  rating=='123'
 ```
+
+And this concludes our quick cheatsheet for HTTPie.
