@@ -23,7 +23,7 @@ Learn learn about the basic build blocks to do asynchronous programming in cloju
 1. If you never touched clojure doing [tutorial 1](clojure-tutorial-part-1-http-requests) first should prove useful.
 2. This tutorial will build on top of the examples of [tutorial 2](clojure-tutorial-part-2-web-server-and-suart-sierra-components) but it's not mandatory if you only want to understand the concepts.
 
-## Channels 
+## Channels
 
 A channel is similar to a Unix pipe. You produce something on one side, and someone in the other side can consume it. Channels in clojure are part of the library `clojure.core.async` that you can require like this:
 
@@ -37,7 +37,7 @@ Now in your REPL let's create a channel with no buffer and insert a string in th
 (def my-channel (async/chan))
 
 ;; you will get stuck here
-(async/>!! my-channel "hello world!") 
+(async/>!! my-channel "hello world!")
 ```
 
 You just got stuck because the function `>!!` inserts a value in the channel but will block if no buffer space is available. Hit `Control+C` to quit the instruction and get your REPL back.
@@ -113,10 +113,10 @@ Let's try to replace the `thread` function with `go` and see if it still works:
 (def my-channel (async/chan))
 
 ;; using <!! is incorrect here, we will see why in a minute
-(async/go 
+(async/go
   (while true
     (println (async/<!! my-channel))))
-    
+
 (async/>!! my-channel "More hello")
 ```
 
@@ -128,17 +128,17 @@ The same logic that applies to `<!!` also applies to `>!!`. In a go block you sh
 (def my-channel (async/chan))
 
 ;; using <! allows our go block to "share" the underlying thread with other go blocks
-(async/go 
+(async/go
   (while true
     (println (async/<! my-channel))))
-    
+
 (async/go (async/>! my-channel "More hello"))
 ```
 
-And if you are curious of how many go blocks you can create: 
+And if you are curious of how many go blocks you can create:
 
 ```clojure
-;; this will break your REPL
+;; this will **NOT** break your REPL
 (doseq [x (range 1 100000)]
  (println x)
  (async/go
@@ -161,37 +161,48 @@ Let's the the following example:
    (async/go (println "Consumer" n (async/<! c)))
    (async/go (println "Consumer" n (async/<! c))))
 (consumer 1)
-  
+
 (async/go
   (async/>! c "Item 1")
   (async/>! c "Item 2")
   (async/>! c "Item 3"))
-``` 
-  
+```
+
 Now imagine we have two consumers and both want to receive **all** items. In our previous example once a consumer consumes a value from a pipe, no one else can read it.
 
 It is for these use cases that the `mult` and `tap` functions exist.
-  
-```clojure 
+
+```clojure
 (def c (async/chan))
 (def c-mult (async/mult c))
 
-(def tap1 (async/tap c-mult (async/chan)))
-(def tap2 (async/tap c-mult (async/chan)))
+(def tap1-c (async/chan))
+(def tap2-c (async/chan))
+(def a1 (atom 0))
+(def a2 (atom 0))
 
+(def tap1 (async/tap c-mult tap1-c))
+(def tap2 (async/tap c-mult tap2-c))
 
-(defn consumer [n tap]
-   (async/go (println "Consumer" n (async/<! c)))
-   (async/go (println "Consumer" n (async/<! c)))
-   (async/go (println "Consumer" n (async/<! c))))
-   
-(consumer 1 tap1)
-(consumer 2 tap2)
-  
+(defn consumer [n tap-c a]
+  (async/go-loop []
+    (when-let [v (async/<! tap-c)]
+      (do
+        (println "Consumer" n "got" v)
+        (swap! a inc)
+        (recur)))))
+
+(consumer 1 tap1-c a1)
+(consumer 2 tap2-c a2)
+
 (async/go
   (async/>! c "Item 1")
   (async/>! c "Item 2")
   (async/>! c "Item 3"))
+
+;; Let's see how much events were counted by each consumer
+(println @a1)
+(println @a2)
 ```
 
 ## Using channels to provide SSE (Server Sent Event)
@@ -203,7 +214,7 @@ Let's assume we start with a baseline setup in similar to [lesson 2](https://git
   (:require [yada.yada :as yada]
             [com.stuartsierra.component :as component]
             [clojure.core.async :as async]))
-            
+
 (defn get-new []
   (yada/resource
     {:methods
@@ -211,23 +222,23 @@ Let's assume we start with a baseline setup in similar to [lesson 2](https://git
       {:produces "text/plain"
        :response (fn [ctx]
                     "Hello world!")}}}))
-            
+
 (defn new-api []
   ["/api/new"
    [
     ["" (get-new)]
     ["/sse" (get-sse)]]])
-    
+
 (defn stop [server]
  ((:close server)))
-    
+
 (defn create-web-server [port]
- (yada/listener 
+ (yada/listener
     (new-api)
     {:port port}))
-    
-(def server (create-web-server 3000))    
-```           
+
+(def server (create-web-server 3000))
+```
 
 You can test the server in your shell:
 
@@ -244,7 +255,7 @@ Server: Aleph/0.4.1
 Connection: Keep-Alive
 Date: Fri, 16 Mar 2018 20:17:20 GMT
 
-Hello world!% 
+Hello world!%
 ```
 
 We can add an endpoint `/api/new/sse` that will return SSE events through a persistent connection.
@@ -266,15 +277,15 @@ We can add an endpoint `/api/new/sse` that will return SSE events through a pers
    [
     ["" (get-new)]
     ["/sse" (get-sse)]]])
-    
-    
+
+
 (async/thread
   (doseq [x (range 1 1000)]
      (Thread/sleep 2000)
      (async/put! channel (str "Hello there -> " x))))
 
 (stop server)
-(def server (create-web-server 3000))    
+(def server (create-web-server 3000))
 ```
 
 And again, test it on your shell:
