@@ -27,10 +27,10 @@ http -p 'h' https://swapi.co/api
 ```
 
 
-Only print the response body (`B`):
+Only print the response body (`b`):
 
 ```
-http -p 'B' https://swapi.co/api
+http -p 'b' https://swapi.co/api
 ```
 
 Use different HTTP action:
@@ -51,20 +51,26 @@ Define and print the request body in JSON format.
 Note the `Content-Type` header.
 
 ```
-http --print 'H' POST https://swapi.co/api/films/1  rating='123'
+http --print 'HB' POST https://swapi.co/api/films/1  rating='123'
 ```
 
-Define and print the request body in form encoded format.
-Again note the `Content-Type` header.
+Define and print the **request body** in form encoded format.
+Again note the `Content-Type` header (`-f stands for --form`).
 
 ```
-http --print 'H' -f POST https://swapi.co/api/films/1  rating='123'
+http --print 'HB' -f POST https://swapi.co/api/films/1 rating='123'
 ```
 
-Pass parameter via URL string. Check the URL path in the first line:
+Pass parameter via the **URL string**. Check the URL path in the first line:
 
 ```
-http --print 'H' POST https://swapi.co/api/films/1  rating=='123'
+http --print 'H' POST https://swapi.co/api/films/1/ rating=='123'
+```
+
+Pass a new header:
+
+```
+http --print 'Hb' GET https://swapi.co/api/films/1/ Accept:text/html
 ```
 
 And this concludes our quick cheatsheet for HTTPie.
