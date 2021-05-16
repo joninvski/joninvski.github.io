@@ -25,10 +25,10 @@ footer:
 social:
   - title: github
     url: http://github.com/joninvski
-  - title: google-plus
-    url: http://google.com/+JoaoTrindade
-  - title: twitter
-    url: http://twitter.com/joaotrindade
+  # - title: google-plus
+  #   url: http://google.com/+JoaoTrindade
+  # - title: twitter
+  #   url: http://twitter.com/joaotrindade
   - title: linkedin
     url: http://pt.linkedin.com/in/trindadejoao
   - title: flickr
