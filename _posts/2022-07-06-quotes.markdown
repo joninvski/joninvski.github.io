@@ -1,0 +1,14 @@
+---
+layout: default
+modal-id: 1
+date: 2022
+order: 1
+type: page
+alt: image-alt
+---
+
+## Quotes
+
+"For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled" - Richard Feynman
+
+"Science is the belief in the ignorance of the experts" - Richard Feynman
