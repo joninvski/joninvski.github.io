@@ -231,4 +231,4 @@ But new machines/databases could be created on the other AZs.
 
 If you want to see all together here is the gist:
 
-{% gist joninvski/33f1dc02ff1d2f0d1e89%}
+<script src="https://gist.github.com/joninvski/33f1dc02ff1d2f0d1e89.js"></script>

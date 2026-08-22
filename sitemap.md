@@ -6,90 +6,24 @@ short_summary: Blog posts by label
 
 ---
 
+{% assign topics = "android|AWS|bash|clojure|docker|git|python" | split: "|" %}
+
 <div class="container">
-
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Blog posts by label</h1>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <h2 id="android">Android</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'android' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="aws">AWS</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'AWS' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="bash">Bash</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'AWS' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="clojure">Clojure</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'clojure' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="docker">Docker</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'docker' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="git">Git</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'git' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-
-    <div class="col-md-6">
-      <h2 id="python">Python</h2>
-      {% for post in site.posts %}
-      {% for keyword in post.keywords %}
-      {% if keyword == 'python' %}
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      {% endif %}
-      {% endfor %}
-      {% endfor %}
-    </div>
-  </div>
+    <section class="section-pad">
+        <h1 class="section-title">Posts by topic 🗂️</h1>
+        <p class="section-sub">All the rabbit holes I've fallen into, sorted.</p>
+        <div class="blog-listing sitemap-cols">
+            {% for topic in topics %}
+            {% assign topic_id = topic | downcase %}
+            <h3 id="{{ topic_id }}">{{ topic }}</h3>
+            {% for post in site.posts %}
+            {% for keyword in post.keywords %}
+            {% if keyword == topic or keyword == topic_id %}
+            <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
 </div>

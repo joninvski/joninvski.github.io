@@ -7,33 +7,28 @@ short_summary: Tech blog about functional programming, containers and other cool
 ---
 
 <div class="container blog-all">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <div class="posts">
-                {% for post in site.posts %}
-                {% if post.type == "blog" %}
-                <div class="blog-entry">
-                    <h1 class="post-title">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h1>
-                    <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
-                    <article>
-                        {{ post.short_summary }}
-                    </article>
-                    {% if post.keywords %}
-                      <span class="keywords">Labels: 
-                      {% for keyword in post.keywords %}
-                        <a href="{{ site.url }}/sitemap.html#{{ keyword }}">{{ keyword }}</a>{% if forloop.last == false %},{% endif %} 
-                      {% endfor %}
-                      </span>
-                      {% endif %}
-                </div>
-                <hr/>
-                {% endif %}
-                {% endfor %}
+    <section class="section-pad">
+        <h1 class="section-title">Welcome to my brain dump ✍️</h1>
+        <p class="section-sub">Functional programming, containers, and other geeky adventures.</p>
+        <div class="blog-listing">
+            {% for post in site.posts %}
+            {% if post.type == "blog" %}
+            <div class="blog-card">
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <span class="post-date">{{ post.date | date: "%B %e, %Y" }}</span>
+                <article>
+                    {{ post.short_summary }}
+                </article>
+                {% if post.keywords %}
+                  <span class="keywords">
+                  {% for keyword in post.keywords %}
+                    <a href="{{ site.url }}/sitemap.html#{{ keyword }}">{{ keyword }}</a>
+                  {% endfor %}
+                  </span>
+                  {% endif %}
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        <div class="col-md-2"></div>
-    </div>
+    </section>
 </div>

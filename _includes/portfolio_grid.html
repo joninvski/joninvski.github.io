@@ -1,29 +1,14 @@
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="section-front">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Main Technologies</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-              {% assign sorted_posts = (site.posts | sort: 'order') %}
-                {% for post in sorted_posts %}
-                    {% if post.type == "portfolio" %}
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-                        </a>
-                    </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+<section id="tech" class="section-pad">
+    <div class="container">
+        <h2 class="section-title">Things I play with 🧰</h2>
+        <p class="section-sub">The toolbox changes, the curiosity doesn't.</p>
+        <div class="tech-grid">
+            <div class="tech-card"><span class="tech-emoji">☕</span><div class="tech-name">Java &amp; Android</div><div class="tech-note">Where it all started</div></div>
+            <div class="tech-card"><span class="tech-emoji">🔮</span><div class="tech-name">Clojure</div><div class="tech-note">(def happiness [lisp])</div></div>
+            <div class="tech-card"><span class="tech-emoji">🐳</span><div class="tech-name">Docker &amp; Kubernetes</div><div class="tech-note">Ships all the way down</div></div>
+            <div class="tech-card"><span class="tech-emoji">☁️</span><div class="tech-name">AWS</div><div class="tech-note">Renting someone else's computers</div></div>
+            <div class="tech-card"><span class="tech-emoji">🐍</span><div class="tech-name">Python</div><div class="tech-note">Batteries included</div></div>
+            <div class="tech-card"><span class="tech-emoji">🤖</span><div class="tech-name">Machine Learning</div><div class="tech-note">More theory than practice (for now)</div></div>
         </div>
-    </section>
+    </div>
+</section>
